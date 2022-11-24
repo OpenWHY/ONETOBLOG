@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://oneto.x-lib.metahook.cc/sitemap.xml
