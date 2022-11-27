@@ -11,6 +11,105 @@
   </head>
   <body>
     <div id="root"></div>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript"  src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+        var res = {liveflag:"true","title":"dasdasdasdasd","globalid":"1012743","url":"dsadasdasdasdasd","image":"","summary":"dsadasdasdasdasdas"};
+        function item_info(){
+            return JSON.stringify(res);
+        }
+        try {
+            window.share.shareData(JSON.stringify(res));
+        } catch(e) {
+     
+        }
+        //微信相关代码
+        wx.error(function (res) {
+            //alert(res.errMsg);
+        });
+        wx.ready(function () {
+    /*
+    wx.updateAppMessageShareData({ 
+        title: 'updateAppMessageShareData', // 分享标题
+        desc: 'updateAppMessageShareData', // 分享描述
+        link: '', // 分享链接，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致
+        imgUrl: 'https://files.metahook.cc/2022/05/009eef57cafc624f13c48db3de63f00d.gif?x-oss-process=image%2Fresize,m_fill,w_150,h_150', // 分享图标
+        success: function () {
+          // 设置成功
+        alert("分享成功！");
+        }
+      })
+    wx.updateTimelineShareData({ 
+        title: 'updateAppMessageShareData', // 分享标题
+        link: '', // 分享链接，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致
+        imgUrl: 'https://files.metahook.cc/2022/05/009eef57cafc624f13c48db3de63f00d.gif?x-oss-process=image%2Fresize,m_fill,w_150,h_150', // 分享图标
+        success: function () {
+          // 设置成功
+        alert("分享成功！");
+        }
+      })
     
+    */
+    
+    
+    
+            // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+            wx.onMenuShareTimeline({
+                title: '1111111', // 分享标题
+                desc: "22222222",
+                link: "22222222",
+                imgUrl: "https://files.metahook.cc/2022/05/009eef57cafc624f13c48db3de63f00d.gif?x-oss-process=image%2Fresize,m_fill,w_150,h_150", // 分享图标
+                success: function () {
+                    alert("分享成功！");
+                }
+            });
+            // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
+            wx.onMenuShareAppMessage({
+                title: 'onMenuShareAppMessage',
+                desc: "测试测试",
+                link: "",
+                imgUrl: "https://www.metahook.cc/wp-content/themes/zibll/img/user_t.jpg",
+                type: 'link',
+                success: function () {
+                    alert("分享成功！");
+                }
+            });
+            // 获取“分享到QQ好友”按钮点击状态及自定义分享内容接口
+             wx.onMenuShareQQ({
+                title: '444444444444444444',
+                desc: '3213123123123123',
+                link: '',
+                imgUrl: 'https://files.metahook.cc/2022/05/009eef57cafc624f13c48db3de63f00d.gif?x-oss-process=image%2Fresize,m_fill,w_150,h_150',
+                success: function (res) {
+                    alert('已分享');
+                }
+            });  
+    
+        });
+        
+        var pImg  = "";
+        $.ajax({
+            type: "GET",
+            data: " ",
+            url: "https://www.metahook.cc/demo1/wx_sign.php?callback=?t="+ Math.random(),
+            dataType: "json",
+            success: function (data) {
+                console.log(data.status);
+                console.log(data);
+              
+                wx.config({
+                    debug: false,
+                    appId: data.result.appId,
+                    timestamp: data.result.timestamp,
+                    nonceStr: data.result.nonceStr,
+                    signature: data.result.signature,
+                    jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone']
+                });
+            },
+            error: function () {
+                alert("接口请求失败！");
+            }
+        });
+    </script>
   </body>
 </html>
