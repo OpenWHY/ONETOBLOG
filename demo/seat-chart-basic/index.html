@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="Author" content="壹吐·ONETO">
 <title>座次系统基础版(HTML+JavaScript+CSS)</title>
+<script>var _hmt =_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?ee401e7c253ca6ce7a16abc47c31fb5c";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
 <style>
 body {
     margin: 0px;
@@ -87,7 +88,7 @@ for (var i = 0; i < data.length; i++) {
             seatActive = ' active';
             nameClass = ' class="pink"';
         }
-        document.write('<div class="seat"><div class="seatIco' + seatActive + '"><img src="../assets/seat-chart-basic/images/seat.svg"></div><div class="name"><span' + nameClass + '>' + newArr[j] + '</span></div><div class="no">' + (i + 1) + '-' + (j + 1) + '</div></div>');
+        document.write('<div class="seat"><div class="seatIco' + seatActive + '"><img src="../../assets/seat-chart-basic/images/seat.svg"></div><div class="name"><span' + nameClass + '>' + newArr[j] + '</span></div><div class="no">' + (i + 1) + '-' + (j + 1) + '</div></div>');
     }
     document.write('</div>');
 }
