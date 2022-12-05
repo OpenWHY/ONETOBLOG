@@ -1,4 +1,4 @@
-import{_ as i}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as s,c as d,b as e,d as a,a as r,e as t,r as o}from"./app.1abdca0e.js";const h={},c=t(`<h2 id="目录结构" tabindex="-1"><a class="header-anchor" href="#目录结构" aria-hidden="true">#</a> 目录结构</h2><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>.
+import{_ as i}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as s,c as d,b as e,d as a,a as r,e as t,r as o}from"./app.6c9f5a21.js";const h={},c=t(`<h2 id="目录结构" tabindex="-1"><a class="header-anchor" href="#目录结构" aria-hidden="true">#</a> 目录结构</h2><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>.
 ├── images (必须，图片素材)
 │   └── seat.svg
 ├── index.php (必须，核心代码)
